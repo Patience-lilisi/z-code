@@ -7,7 +7,6 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>z-code-common</module>
-		<module>z-code-controller</module>
 		<module>z-code-nacos-server</module>
 		<module>z-code-ribbon</module>
 	</modules>
