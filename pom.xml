@@ -9,6 +9,7 @@
 		<module>z-code-common</module>
 		<module>z-code-nacos-server</module>
 		<module>z-code-ribbon</module>
+		<module>z-code-feign</module>
 	</modules>
 
 	<properties>
@@ -29,11 +30,19 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.2</version>
 		</dependency>
+		<!-- feign -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.2.2.RELEASE</version>
+		</dependency>
+		<!-- ribbon -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
 			<version>2.2.2.RELEASE</version>
 		</dependency>
+		<!-- nacos配置中心 -->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
