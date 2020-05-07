@@ -1,8 +1,8 @@
-package com.code.app.service.impl;
+package com.code.app.feignService.impl;
 
 import org.springframework.stereotype.Component;
 
-import com.code.app.service.SentinelService;
+import com.code.app.feignService.SentinelService;
 
 @Component
 public class SentinelServiceImpl implements SentinelService {

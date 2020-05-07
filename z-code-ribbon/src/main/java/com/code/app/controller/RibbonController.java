@@ -17,4 +17,9 @@ public class RibbonController {
 	public Object ribbon(HttpServletRequest request) {
 		return restTemplate.getForObject("http://nacos-config",String.class);
 	}
+	
+	@RequestMapping(value="/excs")
+	public Object excs() {
+		return 1/0;
+	}
 }
