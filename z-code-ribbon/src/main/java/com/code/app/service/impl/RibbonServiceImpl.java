@@ -6,24 +6,17 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.code.app.common.PageData;
 import com.code.app.dao.Dao;
-import com.code.app.service.ConfigService;
+import com.code.app.service.RibbonService;
 
-
-@Service("ConfigService")
+@Service("RibbonService")
 //@Transactional(rollbackFor=Exception.class)
-public class ConfigServiceImpl implements ConfigService{
+public class RibbonServiceImpl implements RibbonService{
 	
 	@Autowired
 	private Dao dao;
-
+	
 	@Override
-	public Object senitel(PageData pd) throws Exception {
-		// TODO Auto-generated method stub
-		return dao.findForObject("DemoMapper.Demo", pd);
-	}
-
-	@Override
-	public Object up(PageData pd) throws Exception {
+	public Object ups(PageData pd) throws Exception {
 		// TODO Auto-generated method stub
 		return dao.update("DemoMapper.ups", pd);
 	}

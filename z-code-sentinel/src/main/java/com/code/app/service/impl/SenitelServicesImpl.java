@@ -2,9 +2,8 @@ package com.code.app.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
-import com.code.app.feignService.Senitel01Service;
-import com.code.app.feignService.SentinelService;
 import com.code.app.service.SenitelServices;
 
 import io.seata.spring.annotation.GlobalTransactional;
@@ -13,17 +12,15 @@ import io.seata.spring.annotation.GlobalTransactional;
 public class SenitelServicesImpl implements SenitelServices {
 	
 	@Autowired
-	private SentinelService service;
-	
-	@Autowired
-	private Senitel01Service service01;
+	private RestTemplate restTemplate;
 
 	@Override
 	@GlobalTransactional(rollbackFor=Exception.class)
-	public void Global() {
+	public Object Global() {
 		// TODO Auto-generated method stub
-		service.getPort();
-		service01.ups();
+		restTemplate.getForObject("http://nacos-config/senitelTran", String.class);
+		restTemplate.getForObject("http://ribbon-config/excs", String.class);
+		return "lilisi";
 	}
 
 }
