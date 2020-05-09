@@ -20,13 +20,13 @@ public class ComsumerServiceImpl implements ComsumerService {
 	private ProvideService02 service02;
 
 	@Override
-//	@GlobalTransactional(rollbackFor=Exception.class)
+	@GlobalTransactional(rollbackFor=Exception.class)
 	public void trans() {
 		// TODO Auto-generated method stub
 			service01.trans();
 			service02.trans();
-//			if(1==1) {
-//				throw new RuntimeException();
-//			}
+			if(1==1) {
+				throw new RuntimeException();
+			}
 	}
 }
