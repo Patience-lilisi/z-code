@@ -24,7 +24,6 @@ public class ProvideServiceImpl implements ProvideService {
 	}
 
 	@Override
-	@GlobalTransactional
 	public void trans(PageData pd) throws Exception {
 		// TODO Auto-generated method stub
 		dao.update("DemoMapper.ups", pd);
