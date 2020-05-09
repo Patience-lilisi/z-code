@@ -11,6 +11,10 @@
 		<module>z-code-ribbon</module>
 		<module>z-code-feign</module>
 		<module>z-code-sentinel</module>
+		<module>z-code-seata-provice01</module>
+		<module>z-code-provide</module>
+		<module>z-code-provide02</module>
+		<module>z-code-comsumer</module>
 	</modules>
 
 	<properties>
@@ -46,6 +50,11 @@
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-seata</artifactId>
 		</dependency>
+<!-- 		<dependency>
+    		<groupId>io.seata</groupId>
+   			<artifactId>seata-all</artifactId>
+    		<version>0.9.0</version>
+		</dependency> -->
 		<!-- sentinel熔断器 -->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>

@@ -44,8 +44,8 @@ public class ConfigController {
 	@RequestMapping(value = "/senitelTran")
 	public Object tran(HttpServletRequest request) throws Exception {
 		PageData pd = new PageData(request);
-		pd.put("id", "111111");
-		pd.put("name", "22222");
+		pd.put("id", "provide1");
+		pd.put("name", "provide1");
 		service.up(pd);
 		return "修改成功";
 	}

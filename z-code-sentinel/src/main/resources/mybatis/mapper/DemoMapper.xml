@@ -7,7 +7,7 @@
 	</select>
 
 	<update id="ups" parameterType="pd">
-		update tb_provide set id =
-		#{id},provide=#{name}
+		update tb_senitel set id =
+		#{id},name=#{name}
 	</update>
 </mapper>

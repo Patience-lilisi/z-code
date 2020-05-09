@@ -6,4 +6,11 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>z-code-sentinel</artifactId>
+  	<dependencies>
+		<dependency>
+			<groupId>com</groupId>
+			<artifactId>z-code-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>
