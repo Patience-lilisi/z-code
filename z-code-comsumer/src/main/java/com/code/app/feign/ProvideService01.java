@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.code.app.common.PageData;
 
-@FeignClient(value="provide01-config")
+@FeignClient(value="mapperdb01-config")
 public interface ProvideService01 {
 	
 	@RequestMapping(value="/provide01")
 	public PageData get();
 	
-	@RequestMapping(value="/provide01Tr")
+	@RequestMapping(value="/up")
 	public void trans();
 }

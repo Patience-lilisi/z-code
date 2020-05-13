@@ -32,7 +32,7 @@ public class ProvideController {
 	public void provide02Tr(HttpServletRequest request) throws Exception {
 		PageData pd = new PageData(request);
 		pd.put("ids", "idss");
-		pd.put("names", "lilisi");
+		pd.put("name", "lilisi");
 		service.trans(pd);
 	}
 }

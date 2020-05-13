@@ -8,6 +8,7 @@ import com.code.app.common.PageData;
 import com.code.app.dao.Dao;
 import com.code.app.service.ProvideService;
 
+import io.seata.core.context.RootContext;
 import io.seata.spring.annotation.GlobalTransactional;
 
 @Service("ProvideService")
@@ -26,6 +27,8 @@ public class ProvideServiceImpl implements ProvideService {
 	@Override
 	public void tran(PageData pd) throws Exception {
 		// TODO Auto-generated method stub
+		String xid = RootContext.getXID();
+		System.err.println("provide01 ----- "+xid);
 		dao.update("DemoMapper.ups", pd);
 	}
 
