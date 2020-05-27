@@ -11,13 +11,8 @@
 		<module>z-code-ribbon</module>
 		<module>z-code-feign</module>
 		<module>z-code-sentinel</module>
-		<module>z-code-seata-provice01</module>
-		<module>z-code-provide</module>
-		<module>z-code-provide02</module>
-		<module>z-code-comsumer</module>
 		<module>z-code-mapper</module>
-		<module>z-code-mapperdb01</module>
-		<module>z-code.mapperdb02</module>
+		<module>z-code-gateway</module>
 	</modules>
 
 	<properties>
@@ -48,18 +43,6 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>2.1.2</version>
 		</dependency>
-		<!-- seata分布式事务 -->
-		<!-- <dependency> <groupId>com.alibaba.cloud</groupId> <artifactId>spring-cloud-starter-alibaba-seata</artifactId> 
-			</dependency> -->
- 		<dependency>
-			<groupId>com.alibaba.cloud</groupId>
-			<artifactId>spring-cloud-starter-alibaba-seata</artifactId>
-		</dependency> 
-<!-- 		<dependency>
-			<groupId>io.seata</groupId>
-			<artifactId>seata-spring-boot-starter</artifactId>
-			<version>1.2.0</version>
-		</dependency> -->
 		<!-- sentinel熔断器 -->
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
@@ -86,6 +69,12 @@
 		<dependency>
 			<groupId>com.alibaba.cloud</groupId>
 			<artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+		</dependency>
+		<!-- gateway网关 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<version>2.2.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 
